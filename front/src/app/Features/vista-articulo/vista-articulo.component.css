@@ -1,3 +1,4 @@
+/* General */
 #inicial {
     margin-top: 1%;
 }
@@ -23,40 +24,66 @@
 #nomProd {
     display: flex;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     width: 100%;
     justify-content: center;
     margin-top: 50px;
 }
 
-#tipoProd {
-    font-size: 12px;
+#divInicial a {
+    font-size: 11px;
     margin-top: 40px;
     padding-top: 40px;
+    text-decoration: none;
+    color:cornflowerblue;
 }
 
-#producto {
+#divInicial a:hover {
+    color:blueviolet
+}
+
+#descripcion {
     padding: 5px;
-    height: 40%;
+    height: 30%;
 }
 
-#desProd {
+#desNom {
+    margin-left: 10px;
+}
+
+#divDesProd {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid lightgrey;
-    padding: 15px;
     height: 70%;
     width: 100%;
     color: grey;  
     font-size: small;  
 }
 
-#form label {
+#datos {
+    margin-left: 15px;
+}
+
+#datos label {
   display: flex;
   justify-content: right;
 }
 
-#form p {
+#datos p {
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+#datos a {
     display: flex;
     justify-content: right;
     font-weight: bold;
@@ -72,8 +99,23 @@ h2 {
   margin-left: 10px;
 }
 
+#divImagen {
+    display: flex;
+    width: 1100px;
+    background-color: white;
+    height: 500px;
+    align-items: center;
+}
+
+#divImagen2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #imagen {
-  height: auto;
+    max-width: 70%;
+    border: 1px solid grey;
 }
 
 #divFinal {
@@ -92,16 +134,13 @@ select {
   border-radius: 4px;
 }
 
-#selectEnvio {
-    size: 1px;
-}
-
 select:hover {
-    border: 2px solid
+    border: 2px solid;
+    cursor: pointer;
 }
 
 select:focus {
-    border: 2px solid
+    border: 2px solid;
 }
 
 /* no funciona */
@@ -109,6 +148,7 @@ option:hover {
     border: 2px solid;
     background-color: blanchedalmond;
     font: white;
+    cursor: pointer;
 }
 
 #boton {
@@ -129,6 +169,13 @@ option:hover {
     color:darkslateblue
 }
 
-#divAlquilar {
-    
+#divBotonYPrecio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#relleno {
+    width: 80px;
 }

@@ -1,36 +1,34 @@
 <app-barra></app-barra>
 <div id="inicial">
  <div id="general" class="d-flex">
-
     
-    <div class="container col-md-6" id="divImagen">
-        <div>
-            <img class="img-fluid" id="imagen"  src="assets/logoimage.jpg"/>
+    <!-- Imagen -->
+    <div id="divImagen">
+        <div id="divImagen2" >
+            <img  id="imagen" class="img-fluid" src="assets/t796003.png"/>        
         </div>
-        
     </div>
-    <div id="form"  >
+    <!-- Info -->
+    <div id="datos">
 
+        <!-- Nombres -->
         <div id="divInicial" >
-            <p id="nomProd" class="d-flex justify-content-center">Gazebo De Poliéster</p>
-            <p id="tipoProd" class="d-flex justify-content-right">Categoría: Muebles de exterior</p>
-            <p class="d-flex justify-content-right">Oscar García Lagos</p>
+            <p id="nomProd" class="d-flex justify-content-center">{{nomProd}}</p>
+            <a id="tipoProd" class="d-flex justify-content-right" routerLink="/">{{nomCat}}</a>
+            <a class="d-flex justify-content-right" routerLink="/">{{nomVen}}</a>
         </div>
 
-    
-        <div id="producto">
-            <p class="col-6" >Descripción:</p>
-            <p id="desProd" class="col-10">COLORES DISPONIBLES: - BLANCO -
-                DETODOOUTLETARGENTINA
-                Gazebo Plegable 3 x 3 Armable con Paredes LISAS
-                (Incluye 3 Laterales)
-                DETODOOUTLETARGENTINA</p>
+        <!-- Descripción -->
+        <div id="descripcion">
+            <p id="desNom">Descripción:</p>
+            <div id="divDesProd">
+                <p id="desProd">{{desc}}</p>
+            </div>
         </div>
 
-      
-
-        <div id="divFinal" class="d-flex justify-content-between">
-            <form id="elecciones" action="#" method="post">
+      <!-- Seleccionables -->
+        <div id="divFinal" class="d-flex text-center justify-content-between" >
+            <form id="elecciones"  action="#" method="post">
                 <div> 
                     <select id="selectEnvio" name="envio" (change)="mensajeDias()" required>
                         <option value="" disabled selected hidden>Opción de envío</option>
@@ -60,18 +58,20 @@
                     </select>
                 </div>
             </form>
-            <div id="divAlquilar" >
-                <div id="divPrecio">
-                    <p id="precio" >$25.550</p>
+            <!-- Botón y precio -->
+            <div id="divBotonYPrecio" >
+                <div id="divAlquilar" >
+                    <div id="divPrecio">
+                        <p id="precio">Precio: {{precio}}</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button id="boton"  type="submit" routerLink="/">Alquilar Producto</button>
+                    </div>
+                    
                 </div>
-
-                <div class="d-flex justify-content-end">
-                    <button id="boton"  type="submit">Alquilar Producto</button>
-                </div>
+                <div id="relleno"></div>
             </div>
         </div>
-
-
     </div>
  </div>
 </div>
