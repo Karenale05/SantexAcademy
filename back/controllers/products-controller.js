@@ -1,4 +1,7 @@
 const productsService = require('../services/products-service');
+const multer = require('multer');
+const { fileURLToPath } = require('url');
+const { dirname, extname, join } = require('path');
 
 async function products(req, res, next) {
   console.log('funcionProductos');
@@ -41,6 +44,26 @@ async function chargeProduct(req, res) {
 
   const product = await productsService.chargeProducts(idUsuario, idTipoProducto, nombre,
     detalles, precio, envio);
+
+  const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
+  const MIMETYPES = ['image/jpeg', 'image/png'];
+  const multerUpload = multer({
+    storage: multer.diskStorage({
+        destination: join(CURRENT_DIR, '../uploads'),
+        filename: (req, file, cb) => {
+            const fileExtension = extname(file.originalname);
+            const fileName = file.originalname.split(fileExtension)[0];
+            cb(null, `${fileName}-${Date.now()}${fileExtension}`);
+          },
+      }),
+      fileFilter: (req, file, cb) => {
+        if (MIMETYPES.includes(file.mimetype)) cb(null, true);
+        else cb(new Error(`Solo se permiten archivos ${MIMETYPES.join(' ')}`));
+      },
+      limits: {
+        fieldSize: 10000000,
+      },
+    });
 
   res.status(201).send(product);
 }

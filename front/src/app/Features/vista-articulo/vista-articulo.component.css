@@ -1,0 +1,121 @@
+#general {
+    margin-top: 1%;
+}
+
+#formulario {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#prod {
+    border-top: 30px;
+
+    
+}
+
+#nomProd {
+    font-size: large;
+}
+
+#tipoProd {
+    font-size: small;
+    /* font-weight: 200; no tenemos distintas fuentes */
+}
+
+#producto {
+    padding: 5px;
+    height: 40%;
+}
+
+#desProd {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    padding: 15px;
+    height: 70%;
+    width: 100%;
+    color: grey;    
+}
+
+#form label {
+  display: flex;
+  justify-content: right;
+}
+
+#form p {
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+#imagen {
+  height: auto;
+}
+
+#divFinal {
+    padding: 10px;
+}
+
+#elecciones {
+    float: left;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select:hover {
+    border: 2px solid
+}
+
+select:focus {
+    border: 2px solid
+}
+
+/* no funciona */
+option:hover { 
+    border: 2px solid;
+    background-color: blanchedalmond;
+    font: white;
+}
+
+#boton {
+  background-color: #e6b68b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+  
+#boton:hover {
+  background-color: #c47c3d;
+  cursor: pointer;
+}
+
+#precio {
+    color:darkslateblue
+}
+
+#divAlquilar {
+    
+}

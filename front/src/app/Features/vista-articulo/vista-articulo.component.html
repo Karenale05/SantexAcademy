@@ -1,0 +1,79 @@
+<app-barra></app-barra>
+<div id="general">
+ <div id="formulario" class="d-flex">
+
+    
+    <div class="container col-md-6" id="divImagen">
+        <div>
+            <img class="img-fluid" id="imagen"  src="assets/logoimage.jpg"/>
+        </div>
+        
+    </div>
+    <div id="form" class="container row justify-content-end" >
+
+        <div id="prod" class="row justify-content-end">
+            <p id="nomProd" class="col-5 row justify-content-end">Gazebo De Poliéster</p>
+            <p id="tipoProd" class="col-8 ">Muebles de exterior</p>
+        </div>
+
+        <div id="vendedor" class="row justify-content-end">
+            <p class="col-5">Oscar García Lagos</p>
+        </div>
+    
+        <div id="producto">
+            <p class="col-6" >Descripción:</p>
+            <p id="desProd" class="col-10">COLORES DISPONIBLES: - BLANCO -
+                DETODOOUTLETARGENTINA
+                Gazebo Plegable 3 x 3 Armable con Paredes LISAS
+                (Incluye 3 Laterales)
+                DETODOOUTLETARGENTINA</p>
+        </div>
+
+      
+
+        <div id="divFinal" class="d-flex justify-content-between">
+            <form id="elecciones" action="#" method="post">
+                <div> 
+                    <select id="selectEnvio" (change)="mensajeDias()" name="envio" required>
+                        <option value="" disabled selected hidden>Opción de envío</option>
+                        <option value="retiro">Retiro por local</option>
+                        <option value="envio" >Envío a domicilio</option>
+                    </select>
+                </div>
+
+                <div> 
+                    <select id="selectEnvio" name="envio" required>
+                        <option value="" disabled selected hidden>Cantidad de días a contratar</option>
+                        <option value= 0>1</option>
+                        <option value= 1>2</option>
+                        <option value= 2>3</option>
+                        <option value= 3>4</option>
+                        <option value= 4>5</option>
+                        <option value= 5>6</option>
+                        <option value= 6>7</option>
+                    </select>
+                </div>           
+                
+                <div> 
+                    <select id="selectEnvio" name="envio" required>
+                        <option value="" disabled selected hidden>Forma de pago</option>
+                        <option value="efectivo">Pago con efectivo</option>
+                        <option value="tarjeta" >Pago con tarjeta</option>
+                    </select>
+                </div>
+            </form>
+            <div id="divAlquilar" >
+                <div id="divPrecio">
+                    <p id="precio" >$25.550</p>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button id="boton"  type="submit">Alquilar Producto</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+ </div>
+</div>
