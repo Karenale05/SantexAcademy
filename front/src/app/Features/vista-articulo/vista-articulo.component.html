@@ -14,8 +14,8 @@
         <!-- Nombres -->
         <div id="divInicial" >
             <p id="nomProd" class="d-flex justify-content-center">{{nomProd}}</p>
-            <a id="tipoProd" class="d-flex justify-content-right" routerLink="/">{{nomCat}}</a>
-            <a class="d-flex justify-content-right" routerLink="/">{{nomVen}}</a>
+            <a id="tipoProd" class="d-flex justify-content-right" routerLink="/">Categoría: {{nomCat}}</a>
+            <a class="d-flex justify-content-right" routerLink="/">Vendedor: {{nomVen}}</a>
         </div>
 
         <!-- Descripción -->
@@ -34,12 +34,14 @@
                         <option value="" disabled selected hidden>Opción de envío</option>
                         <option value="retiro">Retiro por local</option>
                         <option value="envio" >Envío a domicilio</option>
+                        <!-- <option *ngIf="retiro" value="envio" >Envío a domicilio</option> -->
                     </select>
                 </div>
 
                 <div> 
                     <select id="selectDias" name="dias" required>
                         <option value="" disabled selected hidden>Cantidad de días a contratar</option>
+                        <!-- <option *ngFor="let dias of listDias">{{listDias[i]}}</option> -->
                         <option value= 0>1</option>
                         <option value= 1>2</option>
                         <option value= 2>3</option>
@@ -55,6 +57,7 @@
                         <option value="" disabled selected hidden>Forma de pago</option>
                         <option value="efectivo">Pago con efectivo</option>
                         <option value="tarjeta" >Pago con tarjeta</option>
+                        <!-- <option *ngIf="pago" value="tarjeta" >Pago con tarjeta</option> -->
                     </select>
                 </div>
             </form>
@@ -65,7 +68,7 @@
                         <p id="precio">Precio: {{precio}}</p>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button id="boton"  type="submit" routerLink="/">Alquilar Producto</button>
+                        <button id="boton" type="submit" (click)="botAlq()" routerLink="/">Alquilar Producto</button>
                     </div>
                     
                 </div>

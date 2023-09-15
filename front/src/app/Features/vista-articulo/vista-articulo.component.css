@@ -32,6 +32,7 @@
 
 #divInicial a {
     font-size: 11px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 40px;
     padding-top: 40px;
     text-decoration: none;
@@ -43,12 +44,14 @@
 }
 
 #descripcion {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 5px;
     height: 30%;
 }
 
 #desNom {
     margin-left: 10px;
+    
 }
 
 #divDesProd {
@@ -62,6 +65,7 @@
     width: 100%;
     color: grey;  
     font-size: small;  
+    
 }
 
 #datos {
