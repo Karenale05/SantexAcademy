@@ -7,33 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaArticuloComponent implements OnInit {
 
-  uploadedImages: string[] = [];
+  // uploadedImages: string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    const imagenes = ("front/src/assets")
+    // const imagenes = ("front/src/assets")
   }
 
-  onFileSelected(event: any): void {
+  // onFileSelected(event: any): void {
     
-    //dejar de visualizar las imagenes cuando suba otra
-    this.uploadedImages = [];
-    const files = event.target.files;
-    if (files) {
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        if (file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
+  //   //dejar de visualizar las imagenes cuando suba otra
+  //   this.uploadedImages = [];
+  //   const files = event.target.files;
+  //   if (files) {
+  //     for (let i = 0; i < files.length; i++) {
+  //       const file = files[i];
+  //       if (file.type.startsWith('image/')) {
+  //         const reader = new FileReader();
+  //         reader.readAsDataURL(file);
 
-          reader.onload = () => {
-            this.uploadedImages.push(reader.result as string);
-          };
-        }
-      }
-    }
-  }
+  //         reader.onload = () => {
+  //           this.uploadedImages.push(reader.result as string);
+  //         };
+  //       }
+  //     }
+  //   }
+  // }
 
   mensajeDias() {
     console.log("se llegó a la función")

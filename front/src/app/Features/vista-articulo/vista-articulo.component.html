@@ -1,6 +1,6 @@
 <app-barra></app-barra>
-<div id="general">
- <div id="formulario" class="d-flex">
+<div id="inicial">
+ <div id="general" class="d-flex">
 
     
     <div class="container col-md-6" id="divImagen">
@@ -9,16 +9,14 @@
         </div>
         
     </div>
-    <div id="form" class="container row justify-content-end" >
+    <div id="form"  >
 
-        <div id="prod" class="row justify-content-end">
-            <p id="nomProd" class="col-5 row justify-content-end">Gazebo De Poliéster</p>
-            <p id="tipoProd" class="col-8 ">Muebles de exterior</p>
+        <div id="divInicial" >
+            <p id="nomProd" class="d-flex justify-content-center">Gazebo De Poliéster</p>
+            <p id="tipoProd" class="d-flex justify-content-right">Categoría: Muebles de exterior</p>
+            <p class="d-flex justify-content-right">Oscar García Lagos</p>
         </div>
 
-        <div id="vendedor" class="row justify-content-end">
-            <p class="col-5">Oscar García Lagos</p>
-        </div>
     
         <div id="producto">
             <p class="col-6" >Descripción:</p>
@@ -34,7 +32,7 @@
         <div id="divFinal" class="d-flex justify-content-between">
             <form id="elecciones" action="#" method="post">
                 <div> 
-                    <select id="selectEnvio" (change)="mensajeDias()" name="envio" required>
+                    <select id="selectEnvio" name="envio" (change)="mensajeDias()" required>
                         <option value="" disabled selected hidden>Opción de envío</option>
                         <option value="retiro">Retiro por local</option>
                         <option value="envio" >Envío a domicilio</option>
@@ -42,7 +40,7 @@
                 </div>
 
                 <div> 
-                    <select id="selectEnvio" name="envio" required>
+                    <select id="selectDias" name="dias" required>
                         <option value="" disabled selected hidden>Cantidad de días a contratar</option>
                         <option value= 0>1</option>
                         <option value= 1>2</option>
@@ -55,7 +53,7 @@
                 </div>           
                 
                 <div> 
-                    <select id="selectEnvio" name="envio" required>
+                    <select id="selectPago" name="pago" required>
                         <option value="" disabled selected hidden>Forma de pago</option>
                         <option value="efectivo">Pago con efectivo</option>
                         <option value="tarjeta" >Pago con tarjeta</option>

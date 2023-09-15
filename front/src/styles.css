@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@font-face {
+    font-family: 'Montserrat';
+    src: url('src/assets/fonts/Montserrat-Black.ttf');
+}
 
 html {
     height: 100%;

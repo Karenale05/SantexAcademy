@@ -1,8 +1,8 @@
-#general {
+#inicial {
     margin-top: 1%;
 }
 
-#formulario {
+#general {
   display: flex;
   max-width: 80%;
   margin: 0 auto;
@@ -14,17 +14,25 @@
 
 #prod {
     border-top: 30px;
+}
 
-    
+#divInicial {
+    margin: 20px;
 }
 
 #nomProd {
-    font-size: large;
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 #tipoProd {
-    font-size: small;
-    /* font-weight: 200; no tenemos distintas fuentes */
+    font-size: 12px;
+    margin-top: 40px;
+    padding-top: 40px;
 }
 
 #producto {
@@ -39,7 +47,8 @@
     padding: 15px;
     height: 70%;
     width: 100%;
-    color: grey;    
+    color: grey;  
+    font-size: small;  
 }
 
 #form label {
@@ -81,6 +90,10 @@ select {
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+#selectEnvio {
+    size: 1px;
 }
 
 select:hover {
