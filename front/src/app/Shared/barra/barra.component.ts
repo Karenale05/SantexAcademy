@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BarraService } from 'src/app/core/services/barra.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-barra',
@@ -10,7 +11,7 @@ export class BarraComponent implements OnInit {
 
   listCategorias: any[]=[]
 
-  constructor (private service: BarraService) { }
+  constructor (private service: BarraService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getCategories().subscribe(categorias => {
@@ -19,4 +20,7 @@ export class BarraComponent implements OnInit {
     })
   }
 
+  filtrar(idCategoria: string) {
+    this.router.navigate(['Features/categorias', idCategoria]);
+  }
 }

@@ -15,7 +15,7 @@
             Categorias
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" *ngFor="let categoria of listCategorias">{{categoria.name}}</a></li> 
+            <li><a class="dropdown-item" (click)="filtrar(categoria.id)" *ngFor="let categoria of listCategorias">{{categoria.name}}</a></li> 
             
             <li><a class="dropdown-item" href="#">Ayuda</a></li>
           </ul>
