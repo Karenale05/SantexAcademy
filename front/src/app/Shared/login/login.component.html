@@ -1,12 +1,12 @@
 <div class="categorias">
     <div class="dropdown">
       <img src="assets/iconousuario.png" data-bs-toggle="dropdown">      
-      <div class="dropdown-menu">
+      <div class="dropdown-menu dropdown-menu-end">
         <p *ngIf="!logeadoComprador && !logeadoVendedor">Iniciar sesión</p>
         <p *ngIf="logeadoComprador">Bienvenido comprador</p>
         <p *ngIf="logeadoVendedor">Bienvenido vendedor</p>
         <div class="form-group">
-            <input *ngIf="!logeadoComprador && !logeadoVendedor" [(ngModel)]="corLog" id="inputCorreo"  type="text" class="form-control"  placeholder="Correo">
+            <input  *ngIf="!logeadoComprador && !logeadoVendedor" [(ngModel)]="corLog" id="inputCorreo"  type="text" class="form-control"  placeholder="Correo">
             <input *ngIf="!logeadoComprador && !logeadoVendedor" [(ngModel)]="pasLog" id="inputContraseña" type="password" class="form-control" placeholder="Contraseña">
             <button *ngIf="!logeadoComprador && !logeadoVendedor" (click)="botonLogin()" type="button" >Ingresar</button>
             <button *ngIf="logeadoComprador" (click)="botonVendedor()" type="button" class="btn btn-primary" >Conviertase en vendedor</button>

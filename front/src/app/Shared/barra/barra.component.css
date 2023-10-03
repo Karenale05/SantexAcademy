@@ -68,9 +68,28 @@ app-login {
     justify-content: right;
     width: 100%;
     padding-right: 60px;
+    
 }
 
 *:focus {
     outline: 1px solid #874421;
     box-shadow: none;
+}
+
+#BarraGeneral {
+    padding: 0;
+}
+
+#BarraColor {
+    background-color: #e1dede;
+}
+
+#BotonColor {
+    color: #f0eaeb;
+    background-color: #d68a96;
+    border: 0;
+}
+
+#BotonColor:hover {
+    background-color: #c95c6d;
 }
