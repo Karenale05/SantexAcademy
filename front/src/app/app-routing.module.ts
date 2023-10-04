@@ -7,6 +7,7 @@ import { RegistroComponent } from './Features/registro/registro.component';
 import { CargaArticulosComponent } from './Features/carga-articulos/carga-articulos.component';
 import { TarjetaArticuloComponent } from './Features/tarjeta-articulo/tarjeta-articulo.component';
 import { VistaArtIndComponent } from './Features/vista-articulo-ind/vista-articulo-ind.component';
+import { CategoriasComponent } from './Features/categorias/categorias.component';
 
 
 const routes: Routes = [
@@ -39,9 +40,16 @@ const routes: Routes = [
     component: VistaArtIndComponent,
   },
 
+  {
+  path: 'categorias/:id',
+  component: CategoriasComponent, 
+  }
+
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
