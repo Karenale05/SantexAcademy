@@ -28,11 +28,7 @@
     transform-origin: 50% 0%;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    -webkit-transition: none;
-    transition: none;
-    -webkit-animation: expand 0.8s 0.6s ease-out forwards;
-    animation: expand 0.8s 0.6s ease-out forwards;
-    opacity: 0;
+    
     border-radius: 3%;
   }
   .formulario h2 {
@@ -67,8 +63,7 @@
   .formulario .input_field {
     position: relative;
     margin-bottom: 20px;
-    -webkit-animation: bounce 0.6s ease-out;
-    animation: bounce 0.6s ease-out;
+ 
   }
   .formulario .input_field > span {
     position: absolute;
